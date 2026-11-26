@@ -1,0 +1,15 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv(r"F:\COURSES\QP-DS\LAB\lab24\fdata.csv")
+df["Date"] = pd.to_datetime(df["Date"], format="%m-%d-%y")
+plt.plot(df["Date"], df["Open"], marker='o', label="Open")
+plt.plot(df["Date"], df["High"], marker='o', label="High")
+plt.plot(df["Date"], df["Low"], marker='o', label="Low")
+plt.plot(df["Date"], df["Close"], marker='o', label="Close")
+plt.xlabel("Date")
+plt.ylabel("Stock Price")
+plt.title("Alphabet Inc. Financial Data")
+plt.legend()
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()

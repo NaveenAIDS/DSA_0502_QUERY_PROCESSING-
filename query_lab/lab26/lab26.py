@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+plt.subplot(2, 2, 1)
+plt.plot(x, y)
+plt.title("Line Plot")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.subplot(2, 2, 2)
+plt.bar(x, y)
+plt.title("Bar Plot")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.subplot(2, 2, 3)
+plt.scatter(x, y)
+plt.title("Scatter Plot")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.tight_layout()
+plt.show()
